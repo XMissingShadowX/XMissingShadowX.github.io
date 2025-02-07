@@ -60,6 +60,29 @@ body{
     background-color: rgb(192, 89, 233);
 }
 
+.boton_3{
+    padding: 9px;
+    border-radius: 80px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.boton_3 a{
+    background-color: #e90a9b;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.boton_3 a:hover{
+    background-color: rgb(244, 114, 205);
+}
+
 .greetings{
     font-size: 7rem;
     font-weight: 900;
