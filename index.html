@@ -38,6 +38,21 @@
         </div>
     </div>
     <!-- <script src="script_v2.js"></script> -->
-     <script src="script.js"></script>
+    <!-- Corazones flotantes -->
+    <script>
+        const CANTIDAD = 18;
+        const EMOJIS = ['❤️', '🩷', '💕', '💙', '✨'];
+
+        for (let i = 0; i < CANTIDAD; i++) {
+            const c = document.createElement('div');
+            c.classList.add('corazon-flotante');
+            c.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+            c.style.left = Math.random() * 100 + 'vw';
+            c.style.fontSize = (14 + Math.random() * 20) + 'px';
+            c.style.animationDuration = (8 + Math.random() * 14) + 's';
+            c.style.animationDelay = (Math.random() * 12) + 's';
+            document.body.appendChild(c);
+        }
+    </script>
 </body>
 </html>
