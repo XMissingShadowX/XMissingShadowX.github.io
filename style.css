@@ -28,12 +28,12 @@ h1 {
     font-family: "Marck Script", serif; 
     text-align: center;
     font-size: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: #444;
-}
+}  
 
 h2 {
-    font-family: "Marck Script", serif;
+    font-family: "Marck Script", serif; 
     text-align: center;
     font-size: 30px;
     margin-bottom: 30px;
@@ -135,6 +135,14 @@ h2 {
     transition: transform 0.5s ease-in-out 1s;
     z-index: 999;
     cursor: pointer;
+    animation: latido 1.1s ease-in-out infinite;
+}
+
+@keyframes latido {
+    0%, 100% { scale: 1; }
+    15%       { scale: 1.25; }
+    30%       { scale: 1; }
+    45%       { scale: 1.15; }
 }
 
 .corazon::before,
@@ -165,6 +173,7 @@ h2 {
 .abierto .corazon {
     transform: rotate(90deg);
     transition-delay: 0.4s;
+    animation-play-state: paused;
 }
 
 .carta.mostrar-carta {
@@ -212,7 +221,6 @@ h2 {
 .corazon-flotante {
     position: fixed;
     bottom: -60px;
-    font-size: 20px;
     opacity: 0;
     animation: flotar linear infinite;
     pointer-events: none;
@@ -221,20 +229,10 @@ h2 {
 }
 
 @keyframes flotar {
-    0% {
-        transform: translateY(0) rotate(0deg) scale(1);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(-110vh) rotate(25deg) scale(0.6);
-        opacity: 0;
-    }
+    0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10%  { opacity: 0.7; }
+    90%  { opacity: 0.3; }
+    100% { transform: translateY(-110vh) rotate(25deg) scale(0.6); opacity: 0; }
 }
 
 /*Vista celular*/
